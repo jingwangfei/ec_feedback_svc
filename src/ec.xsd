@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified">
+	<xs:element name="EcRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="BIPCode" type="xs:string" />
+				<xs:element name="ActivityCode" type="xs:string" />
+				<xs:element name="OrigDomain" type="xs:string" minOccurs="0" />
+				<xs:element name="HomeDomain" type="xs:string" minOccurs="0" />
+				<xs:element ref="Routing" />
+				<xs:element name="ProcID" type="xs:string" minOccurs="0" />
+				<xs:element name="TransIDO" type="xs:string" minOccurs="0" />
+				<xs:element name="TransIDOTime" type="xs:string" minOccurs="0" />
+				<xs:element name="SvcCont" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EcResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ProcID" type="xs:string" />
+				<xs:element name="TransIDO" type="xs:string" />
+				<xs:element name="TransIDOTime" type="xs:string" />
+				<xs:element name="TransIDH" type="xs:string" minOccurs="0" />
+				<xs:element name="TransIDHTime" type="xs:string" minOccurs="0" />
+				<xs:element ref="Response" />
+				<xs:element name="SvcCont" type="xs:string" minOccurs="0" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Routing">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="RouteType" type="xs:string" />
+				<xs:element name="RouteValue" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Response">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="RspType" type="xs:string" />
+				<xs:element name="RspCode" type="xs:string" />
+				<xs:element name="RspDesc" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

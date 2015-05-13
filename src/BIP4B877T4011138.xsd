@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified">
+	<xs:element name="AdditionResult">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="OperSeq" type="xs:string" />
+				<xs:element name="SuccNum" type="xs:string" />
+				<xs:element ref="SuccInfo" minOccurs="0" maxOccurs="unbounded" />
+				<xs:element name="FailNum" type="xs:string" />
+				<xs:element ref="FailInfo" minOccurs="0" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SuccInfo">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="SuccTel" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="FailInfo">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="MobNum" type="xs:string" />
+				<xs:element name="Rsp" type="xs:string" />
+				<xs:element name="RspDesc" type="xs:string" minOccurs="0" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
