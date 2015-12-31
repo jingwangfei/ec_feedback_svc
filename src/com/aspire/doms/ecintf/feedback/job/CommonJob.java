@@ -11,7 +11,7 @@ import com.aspire.ec.scheduler.ECJob;
 /**
  * 基础任务类，用于根据指定的参数执行对应的业务操作。
  * 
- * @author liuhongtian
+ * @author jingtao
  * 
  */
 public class CommonJob extends ECJob {
